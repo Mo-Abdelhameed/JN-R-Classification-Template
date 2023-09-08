@@ -8,6 +8,9 @@ RUN install2.r --error \
 RUN apt-get update && apt-get install -y python3-pip
 RUN pip3 install jupyter
 
+# Install IRkernel
+RUN R -e "install.packages('IRkernel', repos='https://cloud.r-project.org/')"
+
 # Ensure the IRkernel is available to Jupyter
 RUN R -e "IRkernel::installspec(user = FALSE)"
 
