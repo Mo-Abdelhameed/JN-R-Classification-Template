@@ -1,4 +1,4 @@
-FROM rocker/tidyverse:latest
+FROM jupyter/r-notebook:r-4.3.1
 
 RUN install2.r --error \
     --deps TRUE \
