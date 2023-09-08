@@ -1,4 +1,4 @@
-# JN-r-Classification-Template
+# JN-R-Classification-Template
 
 ## This repository is a dockerized implementation of the re-usable classifier model.
 
