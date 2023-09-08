@@ -1,8 +1,15 @@
-FROM jupyter/r-notebook:r-4.3.1
+FROM rocker/tidyverse:latest
 
 RUN install2.r --error \
     --deps TRUE \
     renv
+
+# Install Jupyter
+RUN apt-get update && apt-get install -y python3-pip
+RUN pip3 install jupyter
+
+# Ensure the IRkernel is available to Jupyter
+RUN R -e "IRkernel::installspec(user = FALSE)"
 
 COPY src ./opt/src
 
