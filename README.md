@@ -32,7 +32,7 @@ In this section we cover the following:
 
 ### To run locally (without Docker)
 
-- Create your virtual environment and install dependencies listed in `requirements.txt` which is inside the `requirements` directory.
+- Create your virtual environment and install dependencies listed in `requirements.txt`.
 - Run the script `src/train.py` to train the logistic regression classifier model. This will save the model artifacts, including the preprocessing pipeline and label encoder, in the path `./model_inputs_outputs/model/artifacts/`.
 - Run the script `src/predict.py` to run batch predictions using the trained model. This script will load the artifacts and create and save the predictions in a file called `predictions.csv` in the path `./model_inputs_outputs/outputs/predictions/`.
 
